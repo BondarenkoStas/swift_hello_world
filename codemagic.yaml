@@ -33,8 +33,6 @@ workflows:
         - xcode-project build-ipa --project "helloworld.xcodeproj" --scheme "helloworld"
         - |
           ls -la build/ios/ipa
-          echo "--------------"
-          ls -la build/ios/ipa/Payload
         - |
           apppa=$(find ~ -name "helloworld.app")
           echo "app path: $apppa"
