@@ -16,3 +16,4 @@ workflows:
         - xcodebuild -project "helloworld.xcodeproj" -scheme "helloworld" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
       artifacts:
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
