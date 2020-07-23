@@ -36,5 +36,5 @@ workflows:
           echo $apppath
       artifacts:
         - build/ios/ipa/*.ipa
-        - $HOME/Library/Developer/Xcode/DerivedData/**/*.app
-        - $HOME/Library/Developer/Xcode/DerivedData/**/*.dSYM
+        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
