@@ -38,5 +38,5 @@ workflows:
           echo "dSYM path: $dsympath"
       artifacts:
         - build/ios/ipa/*.ipa
-        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+        - build/ios/ipa/Payload/*.app
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
