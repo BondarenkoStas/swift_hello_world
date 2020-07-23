@@ -33,10 +33,12 @@ workflows:
         - xcode-project build-ipa --project "helloworld.xcodeproj" --scheme "helloworld"
         - |
           apppath=$(find $HOME/Library/Developer/Xcode/DerivedData -name "*.app" | head -1)
-          echo "app path: $apppath"
+          echo "app path xcode: $apppath"
+          apppath2=$(find build -name "*.app" | head -1)
+          echo "app path build: $apppath2"
           dsympath=$(find $HOME/Library/Developer/Xcode/DerivedData -name "*.dSYM" | head -1)
           echo "dSYM path: $dsympath"
       artifacts:
         - build/ios/ipa/*.ipa
-        - build/ios/ipa/Payload/*.app
+        - build/ios/ipa/**/*.app
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
