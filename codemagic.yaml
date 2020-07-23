@@ -13,7 +13,7 @@ workflows:
             include: true
             source: true
       scripts:
-        - xcodebuild -project "helloworld.xcodeproj" -scheme "helloworld" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
+        - xcodebuild build -project "helloworld.xcodeproj" -scheme "helloworld" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO DEBUG_INFORMATION_FORMAT="dwarf-with-dsym"
       artifacts:
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
