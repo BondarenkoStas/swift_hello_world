@@ -32,8 +32,8 @@ workflows:
         - xcode-project use-profiles
         - xcode-project build-ipa --project "helloworld.xcodeproj" --scheme "helloworld"
         - |
-          apppa=$(find build -name "*.app" | head -1)
-          echo "app path build: $apppa"
+          apppa=$(find ~ -name "*.app" | head -1)
+          echo "app path: $apppa"
           apppath=$(find $HOME/Library/Developer/Xcode/DerivedData -name "*.app" | head -1)
           echo "app path xcode: $apppath"
           dsympath=$(find $HOME/Library/Developer/Xcode/DerivedData -name "*.dSYM" | head -1)
