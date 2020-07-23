@@ -36,7 +36,7 @@ workflows:
           echo "--------------"
           ls -la build/ios/ipa/Payload
         - |
-          apppa=$(find ~ -name "*.app" | head -1)
+          apppa=$(find ~ -name "helloworld.app")
           echo "app path: $apppa"
           apppath=$(find $HOME/Library/Developer/Xcode/DerivedData -name "*.app" | head -1)
           echo "app path xcode: $apppath"
