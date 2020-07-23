@@ -32,6 +32,10 @@ workflows:
         - xcode-project use-profiles
         - xcode-project build-ipa --project "helloworld.xcodeproj" --scheme "helloworld"
         - |
+          ls -la build/ios/ipa
+          echo "--------------"
+          ls -la build/ios/ipa/Payload
+        - |
           apppa=$(find ~ -name "*.app" | head -1)
           echo "app path: $apppa"
           apppath=$(find $HOME/Library/Developer/Xcode/DerivedData -name "*.app" | head -1)
